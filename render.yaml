@@ -1,12 +1,12 @@
 databases:
   - name: UTAniki_DB
     databaseName: utaniki_db
-    user: UTAniki
+    user: UTAniki-1
     region: singapore
 
 services:
   - type: web
-    name: UTAniki
+    name: UTAniki-1
     env: ruby
     region: singapore
     plan: free
