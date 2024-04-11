@@ -1,0 +1,78 @@
+
+
+
+.riders-container {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  h3 {
+    width:auto;
+    margin: 30px auto;
+    text-align: center;
+    color:crimson;
+    font-size: 200%;
+  }
+  
+  
+  .main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .time {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  .riders-box {
+  margin: 5px;
+  width: calc(30%); height: 500px; ;
+  color: black;
+  
+  background-color:darkgray
+}
+
+
+title{
+  font-size: large;
+  padding-left: 120px;
+  line-height: 60px;
+ 
+}
+input[type="search"]{
+  width: 70%;
+  height: 20px;
+}
+.another{
+  color: #fafafa;
+  font-size: 120%;
+  letter-spacing: 0;
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 
+  
+}
+.uratarosu{
+  display: flex;
+}
+.kintarosu{
+  display: flex;
+  margin-left: 10%;
+}
+.ryutarosu{
+  font-size: 175%;
+  color: transparent;
+  background-color : black;
+  text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+-webkit-background-clip : text;
+  
+}
+.W{
+  background-color: #b9eb63;
+}
+.kennsaku{
+  text-align: center;
+}

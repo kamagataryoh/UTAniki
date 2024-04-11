@@ -1,0 +1,27 @@
+<body class="haikei2">
+  <%= form_for @riders do |f| %>
+
+    <div class="post-container">
+    <p class="title">お気に入りのライダーを投稿しよう</p>
+      <%= f.label :名前 %>
+      <%= f.text_field :name, :size => 60 %>
+
+      <%= f.label :作品名 %>
+      <%= f.text_field :title, :size => 60 %>
+
+      <%= f.label :キャラクター詳細 %>
+      <%= f.text_field :about, :size => 60 %>
+    
+     <div class="field">
+      <%= f.label :画像 %>
+      <%= f.file_field :image %>
+     </div>
+     <%= f.submit "投稿する", class: "mofmof" %>
+     <% end %>
+     </div>
+
+
+    
+
+  <%= link_to "一覧に戻る", riders_path %>
+</body>

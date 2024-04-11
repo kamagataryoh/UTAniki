@@ -1,0 +1,27 @@
+.post-container {
+    margin: 50px auto;
+    width: 70%;   
+    position: absolute;
+    top: 500;
+    right: 300;
+    margin-top: 20%;
+    margin-left: 10%;
+    height: 300px;
+    border: solid #d3def1;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #d3def1;
+    display:flex;
+    flex-flow: column;
+    opacity: 0.8;
+}
+.input{
+    margin-top: 40%;
+    margin-right: 0%;
+}
+ .mofmof{
+    font-size: 175%;
+    margin-top: 3%;
+    width: 13%;
+    margin-left: 40%;
+ }

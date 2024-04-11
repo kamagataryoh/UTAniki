@@ -1,0 +1,44 @@
+<body class="haikei1">
+
+<h3>投稿一覧</h3>
+
+<div class="kennsaku">
+ <%= form_tag({controller:"riders",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する' %>
+<% end %>
+
+<%= button_to "新規投稿へ", new_rider_path, method: :get %>
+</div>
+
+<div class="riders-container">
+    <% @riders.each do |t| %>
+        <div class="riders-box">
+            <P class="W"><%= t.user.email %></p>
+            <%= image_tag t.image_url, size: "340x350" if t.image? %>
+          <div class="uratarosu" >
+            <p class="another"><%= t.name %></P>
+          <div class="kintarosu">  
+            <%= link_to "詳細へ", rider_path(t.id) %>
+            <% if user_signed_in? %>
+            <% if current_user.already_liked?(t) %>
+                <%= button_to rider_like_path(id: t.id, rider_id: t.id), method: :delete do %>
+                    <p>いいねを取り消す</p><%= t.likes.count %>
+                <% end %>
+            <% else %>
+                <%= button_to rider_likes_path(id: t.id, rider_id: t.id), method: :post do %>
+                    <p>いいね</p><%= t.likes.count %>
+                <% end %>
+            <% end %>
+        <% else %>
+            <p>いいねの数 = </p><%= t.likes.count %>
+        <% end %>
+        </div>
+        </div>
+            <p class="ryutarosu"><%= t.title %></P>
+            
+            
+        </div>
+     <% end %>
+</div>
+</body>

@@ -1,0 +1,56 @@
+<body class="haikei3">
+<h1><p class="dennou"><%= @rider.title  %></p></h1>
+
+
+<div class="rider">
+
+<%= image_tag @rider.image_url, size: "400x350" if @rider.image? %>
+<p class="kuuga"><%= @rider.about %></p>
+  
+</div>
+<div class="agito">
+<p class="toukoubi"><%= @rider.created_at %></p>
+  
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@rider) %>
+        <%= button_to rider_like_path(@rider), method: :delete do %>
+          <p>いいねを取り消す</p><%= @rider.likes.count %>
+        <% end %>
+      <% else %>
+        <%= button_to rider_likes_path(@rider), method: :post do %>
+          <p>いいね</p><%= @rider.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p>いいねの数 = <%= @rider.likes.count %></p>
+    <% end %>
+  <%= button_to "編集する", edit_rider_path(@rider.id) %>
+</div>
+
+<div class="ryuki">
+<h2>いいねしたユーザー</h2>
+<% @rider.liked_users.each do |user| %>
+  <li><%= user.email %></li>
+<% end %>
+
+<div class="comment-wrapper">
+  <p>コメント一覧</p>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.user.email unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+    </div>
+      <br>
+</div>      
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@rider, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= submit_tag "コメントする" %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "ライダー一覧に戻る", riders_path %>

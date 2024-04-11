@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    padding: 0;
+    margin: 0 ;
+ }
+ 
+ 
+  .haikei1{
+    font-family: "Kokoro";
+    background-image: url("https://hobby.dengeki.com/ss/hobby/uploads/2018/11/181116_001.jpg");
+    background-size:contain;
+  }
+  
+  .haikei2{
+    
+    background-image: url("https://yuraku-group.jp/wp-content/uploads/2019/02/2019.02.25_morioka_blog_1.jpg");
+    background-size: cover;
+  }
+  
+  header {
+    background-color: #f9f9f9;
+    height: 100px;
+    font-weight: bold;
+    display: flex;
+    jstify-content: space-between;
+    align-items: center;
+  
+  } 
+  
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    position: absolute;
+    right: 0;
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  footer {
+    color: gray;
+    height: 30px;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+
+  }
+  
+  
